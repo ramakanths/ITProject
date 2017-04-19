@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.rk.student.dao.CommonTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.rk.student.dao.CommonTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.rk.student.dao.html">com.rk.student.dao</a> &gt; CommonTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.004s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into COURSE (CID, CCREDITS, CNAME, CTIME, CWEEKNAME) values (default, ?, ?, ?, ?)
+Hibernate: insert into COURSE (CID, CCREDITS, CNAME, CTIME, CWEEKNAME) values (default, ?, ?, ?, ?)
+Hibernate: insert into STUDENT (SID, SEMAIL, SNAME) values (default, ?, ?)
+Hibernate: insert into STUDENT (SID, SEMAIL, SNAME) values (default, ?, ?)
+Hibernate: select student0_.SID as SID6_, student0_.SEMAIL as SEMAIL6_, student0_.SNAME as SNAME6_ from STUDENT student0_
+Hibernate: select courses0_.SID as SID6_1_, courses0_.CID as CID1_, course1_.CID as CID5_0_, course1_.CCREDITS as CCREDITS5_0_, course1_.CNAME as CNAME5_0_, course1_.CTIME as CTIME5_0_, course1_.CWEEKNAME as CWEEKNAME5_0_ from COURSE_REG courses0_ inner join COURSE course1_ on courses0_.CID=course1_.CID where courses0_.SID=?
+Hibernate: select course0_.CID as CID5_, course0_.CCREDITS as CCREDITS5_, course0_.CNAME as CNAME5_, course0_.CTIME as CTIME5_, course0_.CWEEKNAME as CWEEKNAME5_ from COURSE course0_
+Hibernate: select students0_.CID as CID5_1_, students0_.SID as SID1_, student1_.SID as SID6_0_, student1_.SEMAIL as SEMAIL6_0_, student1_.SNAME as SNAME6_0_ from COURSE_REG students0_ inner join STUDENT student1_ on students0_.SID=student1_.SID where students0_.CID=?
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@53c9304f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@40e6e793, org.springframework.test.context.support.DirtiesContextTestExecutionListener@750f325c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@74869a3f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ed797a8]
+[Test worker] INFO org.springframework.test.context.transaction.TransactionContext - Began transaction (1) for test context [DefaultTestContext@15eb632f testClass = CommonTest, testInstance = com.rk.student.dao.CommonTest@55fc54cf, testMethod = test@CommonTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@744e30f testClass = CommonTest, locations = '{classpath:spring-module.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@9840b83]; rollback [true]
+[Test worker] INFO org.springframework.test.context.transaction.TransactionContext - Rolled back transaction for test context [DefaultTestContext@15eb632f testClass = CommonTest, testInstance = com.rk.student.dao.CommonTest@55fc54cf, testMethod = test@CommonTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@744e30f testClass = CommonTest, locations = '{classpath:spring-module.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.13</a> at 25 Aug, 2016 2:34:32 PM</p>
+</div>
+</div>
+</body>
+</html>

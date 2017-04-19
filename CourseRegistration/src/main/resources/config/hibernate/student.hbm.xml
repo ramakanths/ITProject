@@ -1,0 +1,18 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.rk.dto.Student" table="STUDENT">
+		<id name="sId" type="java.lang.Integer">
+			<column name="SID" />
+			<generator class="identity" />
+		</id>
+		<property name="sName" type="string">
+			<column name="SNAME" />
+		</property>
+		<property name="sEmail" type="string">
+			<column name="SEMAIL" />
+		</property>
+	</class>
+</hibernate-mapping> -->

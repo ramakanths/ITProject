@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd
+http://www.springframework.org/schema/tx  
+http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<import resource="config/spring/dataSource.xml" />
+	<import resource="config/spring/HibernateSessionFactory.xml" />
+
+	<!-- <context:annotation-config /> -->
+	<context:component-scan base-package="com.rk" />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="courseTableDao" class="com.rk.tables.dao.CRTablesDao" />
+
+	<!-- <bean id="courseDao" class="com.rk.course.dao.CourseDaoImpl" /> <bean 
+		id="courseAction" class="com.rk.action.course.CourseAction"></bean> <bean 
+		id="courseAddAction" class="com.rk.action.course.CourseAddAction"></bean> 
+		<bean id="CourseDeleteAction" class="com.rk.action.course.CourseDeleteAction"></bean> 
+		<bean id="studentDao" class="com.rk.student.dao.StudentDaoImpl"></bean> <bean 
+		id="studentAction" class="com.rk.action.student.StudentAction"></bean> <bean 
+		id="studentEditAction" class="com.rk.action.student.StudentEditAction"></bean> 
+		<bean id="studentCourseRegisterAction" class="com.rk.action.student.StudentCourseRegisterAction"></bean> -->
+
+</beans>

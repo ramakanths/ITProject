@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/User/pages/BaseLayout.jsp">
+		<put-attribute name="title" type="template" value="Welcome User" />
+		<put-attribute name="header" type="template" value="/WEB-INF/User/pages/course/courseHead.jsp" />
+		<put-attribute name="menu" type="template" value="menu.jsp" />
+		<put-attribute name="body" type="template" value="/WEB-INF/User/pages/course/courseView.jsp" />
+	</definition>
+
+	<definition name="/courseView.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Course page" />
+		<put-attribute name="body" type="template" value="course/courseView.jsp" />
+	</definition>
+
+	<definition name="/courseAdd.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Course Add page" />
+		<put-attribute name="body" type="template" value="course/courseAdd.jsp" />
+	</definition>
+
+	<definition name="/courseDelete.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Course Delete page" />
+		<put-attribute name="body" type="template" value="course/courseDelete.jsp" />
+	</definition>
+
+	<definition name="/studentView.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student page" />
+		<put-attribute name="header" type="template"
+			value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template"
+			value="student/studentView.jsp" />
+	</definition>
+
+	<definition name="/studentAdd.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student page" />
+		<put-attribute name="header" type="template"
+			value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template" value="student/studentAdd.jsp" />
+	</definition>
+
+	<definition name="/studentEdit.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student page" />
+		<put-attribute name="header" type="template"
+			value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template"
+			value="student/studentEdit.jsp" />
+	</definition>
+
+	<definition name="/studentCourseRegister.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student page" />
+		<put-attribute name="header" type="template" value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template" value="student/studentCourseRegister.jsp" />
+	</definition>
+
+	<definition name="/StudentCoursesRemoveView.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student page" />
+		<put-attribute name="header" type="template"
+			value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template"
+			value="student/StudentCoursesRemove.jsp" />
+	</definition>
+	
+	<definition name="/studentDelete.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Student Delete Page" />
+		<put-attribute name="header" type="template" value="student/studentHead.jsp" />
+		<put-attribute name="body" type="template" value="student/studentDelete.jsp" />
+	</definition>
+
+</tiles-definitions>

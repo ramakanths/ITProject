@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<!-- <constant name="struts.convention.result.path" value="/WEB-INF/User/pages" /> -->
+
+	<package name="default" namespace="/User" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="CourseView" class="com.rk.action.course.CourseAction">
+			<result name="success" type="tiles">/courseView.tiles</result>
+		</action>
+
+		<action name="CourseAddView" class="com.rk.action.course.CourseAction" method="display">
+			<result name="none" type="tiles">/courseAdd.tiles</result>
+		</action>
+
+		<action name="CourseAdd" class="com.rk.action.course.CourseAddAction">
+			<result name="success" type="redirectAction">CourseView</result>
+			<result name="input" type="tiles">/courseAdd.tiles</result>
+		</action>
+		
+		<action name="CourseDeleteView" class="com.rk.action.course.CourseDeleteAction">
+			<result name="success" type="tiles">/courseDelete.tiles</result>
+		</action>
+
+		<action name="CourseDelete" class="com.rk.action.course.CourseDeleteAction" method="deleteCourses">
+			<result name="success" type="redirectAction">CourseView</result>
+		</action>
+
+		<!-- Student -->
+
+		<action name="StudentView" class="com.rk.action.student.StudentAction">
+			<result name="success" type="tiles">/studentView.tiles</result>
+		</action>
+
+		<action name="StudentAddView" class="com.rk.action.student.StudentAction" method="display">
+			<result name="none" type="tiles">/studentAdd.tiles</result>
+		</action>
+
+		<action name="StudentAdd" class="com.rk.action.student.StudentAction" method="addStudent">
+			<result name="success" type="redirectAction">StudentView</result>
+			<result name="input" type="tiles">/studentAdd.tiles</result>
+		</action>
+
+		<action name="StudentEdit" class="com.rk.action.student.StudentEditAction">
+			<result name="success" type="tiles">/studentEdit.tiles</result>
+		</action>
+
+		<action name="StudentCourseRegisterView" class="com.rk.action.student.StudentCourseRegisterAction" method="display">
+			<result name="none" type="tiles">/studentCourseRegister.tiles</result>
+		</action>
+
+		<action name="StudentCourseRegisterAdd"	class="com.rk.action.student.StudentCourseRegisterAction" method="addStudentCourse">
+			<result name="success" type="redirectAction">
+				<param name="actionName">StudentEdit</param>
+				<param name="sId">${sId}</param>
+			</result>
+			<result name="input" type="tiles">/studentCourseRegister.tiles</result>
+		</action>
+
+		<action name="StudentCoursesRemoveView" class="com.rk.action.student.StudentCourseRemoveAction">
+			<result name="success" type="tiles">/StudentCoursesRemoveView.tiles</result>
+		</action>
+
+		<action name="StudentCoursesRemove" class="com.rk.action.student.StudentCourseRemoveAction"	method="removeStudentCourses">
+			<result name="success" type="redirectAction">
+				<param name="actionName">StudentEdit</param>
+				<param name="sId">${sId}</param>
+			</result>
+		</action>
+
+		<action name="StudentDeleteView" class="com.rk.action.student.StudentDeleteAction">
+			<result name="success" type="tiles">/studentDelete.tiles</result>
+		</action>
+
+		<action name="StudentDelete" class="com.rk.action.student.StudentDeleteAction" method="deleteStudents">
+			<result name="success" type="redirectAction">StudentView</result>
+		</action>
+
+	</package>
+
+</struts>

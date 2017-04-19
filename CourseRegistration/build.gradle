@@ -1,0 +1,43 @@
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+ 
+repositories {
+   // mavenCentral()
+   jcenter()  
+   
+}
+
+
+dependencies {
+    compile 'org.springframework:spring-web:4.1.6.RELEASE'
+    compile 'org.springframework:spring-test:4.1.6.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.1.6.RELEASE'    
+    compile 'org.springframework:spring-orm:4.1.6.RELEASE'
+    
+    compile 'org.apache.struts:struts2-core:2.5-BETA2'
+    compile 'org.apache.struts:struts2-convention-plugin:2.5-BETA2'
+    compile 'org.apache.struts:struts2-spring-plugin:2.5-BETA2'
+    compile 'org.hibernate:hibernate-core:3.6.10.Final'
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'org.slf4j:slf4j-simple:1.7.7'
+    compile 'org.javassist:javassist:3.15.0-GA'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'com.microsoft.sqlserver:sqljdbc4:4.0'
+    compile 'org.apache.struts:struts2-tiles-plugin:2.5'
+    compile 'org.hsqldb:hsqldb:2.3.4'
+    compile 'org.apache.struts:struts2-dojo-plugin:2.3.29'
+    compile 'com.jgeppert.struts2.jquery:struts2-jquery:3.7.1'
+    compile 'com.jgeppert.struts2.jquery:struts2-jquery-plugin:3.7.1'
+    compile 'javax.mail:mail:1.4.7'
+	compile 'javax.mail:javax.mail-api:1.5.2'
+	compile 'log4j:log4j:1.2.17'
+	compile 'junit:junit:4.11'
+	compile 'org.apache.struts:struts2-junit-plugin:2.5.2'
+	//compile 'org.testng:testng:6.9.12'
+	compile 'javax.servlet.jsp:jsp-api:2.2'
+	compile 'org.mockito:mockito-core:1.9.5'
+   
+}  
